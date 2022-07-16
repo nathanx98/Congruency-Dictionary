@@ -1,16 +1,17 @@
 {
   "files": {
-    "main.css": "/Congruency-Dictionary/static/css/main.073c9b0a.css",
-    "main.js": "/Congruency-Dictionary/static/js/main.88963d5c.js",
+    "main.css": "/Congruency-Dictionary/static/css/main.1195c1fa.css",
+    "main.js": "/Congruency-Dictionary/static/js/main.105b37e9.js",
     "static/js/787.b4a9ba49.chunk.js": "/Congruency-Dictionary/static/js/787.b4a9ba49.chunk.js",
-    "static/media/logo.svg": "/Congruency-Dictionary/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "static/media/myself.jpg": "/Congruency-Dictionary/static/media/myself.38516e4a9aa637bea885.jpg",
+    "static/media/logo.png": "/Congruency-Dictionary/static/media/logo.67793de3cab11875809f.png",
     "index.html": "/Congruency-Dictionary/index.html",
-    "main.073c9b0a.css.map": "/Congruency-Dictionary/static/css/main.073c9b0a.css.map",
-    "main.88963d5c.js.map": "/Congruency-Dictionary/static/js/main.88963d5c.js.map",
+    "main.1195c1fa.css.map": "/Congruency-Dictionary/static/css/main.1195c1fa.css.map",
+    "main.105b37e9.js.map": "/Congruency-Dictionary/static/js/main.105b37e9.js.map",
     "787.b4a9ba49.chunk.js.map": "/Congruency-Dictionary/static/js/787.b4a9ba49.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.88963d5c.js"
+    "static/css/main.1195c1fa.css",
+    "static/js/main.105b37e9.js"
   ]
 }
