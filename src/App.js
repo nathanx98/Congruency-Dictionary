@@ -19,11 +19,44 @@ function App() {
   //   setDict(d)
   // })
 
+  const[word, setWord] = useState("")
+  const[message, setMessage] = useState("")
+  
   let dict = {
     "make a choice": "faire un choix",
     'make an offer':'faire une offre',
     'make a commitment':'prendre un engagement',
     'make one\'s escape':'prendre la fuite',
+    'make a promise':'faire une promesse',
+    'make a step':'faire un pas',
+    'have an experience':'faire une expérience',
+    'make a gain':'faire un gain',
+    'are part of':'faire partie de',
+    'make a decision': 'prendre une décision'
+  }
+
+  const search = (e) => {
+    if (e.key === 'Enter') {
+      if (dict[word] === undefined) {
+        setMessage("The word \'" + word + "' Is Not In Our Dictionary")
+      }
+      else {
+        let val = dict[word]
+        val = val.trim().split(/\s+/);
+        let key = word.trim().split(/\s+/);
+        
+        if (key[0] === 'make' && val[0] === 'faire'){
+          setMessage(word + ' is congruent.' + "\n" + 'It\'s French translation is ' + dict[word])
+        }
+        else {
+          setMessage(word + ' is not congruent')
+        }
+        
+        console.log(key)
+        console.log(val)
+        
+      }
+    }
   }
 
 
@@ -38,12 +71,15 @@ function App() {
         <p> ⬇️</p> */}
         {/* <img src = {profileImg} id='profile'></img> */}
 
-        <Form>
-          <Form.Group className="mb-3" controlId="search bar">
-            <Form.Label>Enter an English word</Form.Label>
-            <Form.Control type="email" placeholder="Enter word here" />
-          </Form.Group>
-        </Form>
+        <h2>Enter an English Word</h2>
+        <input 
+          className="form-control" 
+          placeholder={"Press Enter to Search"}
+          value={word}
+          onChange = {(e) => {setWord(e.target.value)}}
+          onKeyDown = {search}
+        ></input>
+        <div>{message}</div>
       </div>
     </div>
     
