@@ -51,10 +51,6 @@ function App() {
         else {
           setMessage(word + ' is not congruent')
         }
-        
-        console.log(key)
-        console.log(val)
-        
       }
     }
   }
@@ -62,7 +58,7 @@ function App() {
 
   return (
     <div className='App'>
-      <div className="navbar navbar-light">
+      <div className="navbar navbar-light" style={{display: "flex", justifyContent: "center"}}>
         <img src = {logo} id='logo'></img>
       </div>
 
