@@ -5,9 +5,7 @@ import logo from './img/logo.png'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import * as d3 from 'd3';
 import data from './data.csv'
-import Papa from 'papaparse'
 
 function App() {
   // let d = {}
