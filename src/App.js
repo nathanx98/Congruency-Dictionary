@@ -1,37 +1,35 @@
 import './App.css';
 import React, {useEffect, useState} from 'react';
-import profileImg from './img/myself.jpg'
 import logo from './img/logo.png'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
+import profileImg from './img/myself.jpg'
+import data from './data.csv';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import data from './data.csv'
+import * as Papa from "papaparse"
 
 function App() {
-  // let d = {}
-  // d3.csv(data, function(data) {
-  //   // dict[[data['make a choice']]] = data['faire un choix']
-  //   let key = "make a choice"
-  //   let val = 'faire un choix'
-  //   Object.assign(d, {[data[key]]: data[val]})
-  //   setDict(d)
-  // })
-
   const[word, setWord] = useState("")
   const[message, setMessage] = useState("")
   
-  let dict = {
-    "make a choice": "faire un choix",
-    'make an offer':'faire une offre',
-    'make a commitment':'prendre un engagement',
-    'make one\'s escape':'prendre la fuite',
-    'make a promise':'faire une promesse',
-    'make a step':'faire un pas',
-    'have an experience':'faire une expérience',
-    'make a gain':'faire un gain',
-    'are part of':'faire partie de',
-    'make a decision': 'prendre une décision'
-  }
+
+  var dict = {}
+  Papa.parse(data, {
+    download: true,
+    header: false, 
+    skipEmptyLines: true,
+    complete: function(results) {
+      results["data"].forEach((val, i) => {
+        Object.assign(dict, {[val[0]]:val[1]})
+      })
+
+      var csv = Papa.unparse(dict, {
+        header: false, 
+        skipEmptyLines: true, 
+      })
+    }
+  })
+
 
   const search = (e) => {
     if (e.key === 'Enter') {
@@ -53,6 +51,8 @@ function App() {
     }
   }
 
+
+  
 
   return (
     <div className='App'>
