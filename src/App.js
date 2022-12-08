@@ -3,7 +3,7 @@ import React, {useEffect, useState} from 'react';
 import logo from './img/logo.png'
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import profileImg from './img/myself.jpg'
+// import profileImg from './img/myself.jpg'
 import data from './data.csv';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import * as Papa from "papaparse"
